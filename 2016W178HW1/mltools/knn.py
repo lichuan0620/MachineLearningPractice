@@ -223,8 +223,8 @@ class knnRegress(regressor):
         X : numpy array 
             N x M numpy array that contains N data points with M features. 
         """
-        ntr,mtr = arr(self.X_train).shape              # get size of training data
-        nte,mte = arr(X).shape                         # get size of test data
+        n_tr,m_tr = arr(self.X_train).shape              # get size of training data
+        n_te,m_te = arr(X).shape                         # get size of test data
 
         if m_tr != m_te:
             raise ValueError('knnRegress.predict: training and prediction data must have the same number of features')

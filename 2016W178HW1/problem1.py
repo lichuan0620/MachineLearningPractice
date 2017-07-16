@@ -17,6 +17,7 @@ print('data points:\t%d' % dpoints)
 
 # problem 1(b)
 plt.figure(1, (12,9))
+
 for f in range(0,features):
     plt.subplot(2, 2, f+1) # when features == 4
     plt.hist(X[:, f], dpoints/4, facecolor='g')
@@ -24,6 +25,7 @@ for f in range(0,features):
     plt.ylabel('count')
     plt.title('iris: data values %d' % f)
     plt.grid(1)
+
 plt.show()
 plt.close(1)
 
@@ -39,16 +41,19 @@ print('std deviation:\t' + str(stdX))
 
 # problem 1(e)
 normX = X
+
 for row in range(0, dpoints):
     normX[row] = (normX[row] - meanX)/stdX
 
 # problem 1(f)
 plt.figure(2, (15, 5))
+
 for i in range(1,4):
     plt.subplot(1,3,i)
     plt.scatter(normX[:, 0], normX[:, i], c=Y)
     plt.xlabel('feature 1')
     plt.ylabel('feature %d' % (i+1))
     plt.grid(1)
+
 plt.show()
 plt.close(2)
