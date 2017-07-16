@@ -8,7 +8,7 @@ import mltools
 
 iris = numpy.genfromtxt("data/iris.txt", delimiter=None)
 Y = iris[:, -1]
-X = iris[:, 0:-1]
+X = iris[:, 0:2] # feature 1 & 2
 X, Y = mltools.shuffleData(X, Y)
 trainX, testX, trainY, testY = mltools.splitData(X, Y, 0.75)
 
@@ -17,9 +17,9 @@ plt.figure(1, (12, 9))
 
 for i, k in enumerate([1, 5, 10, 50]):
     learner = mltools.knn.knnClassify()
-    learner.train(trainX[:, 0:2], trainY, k)
+    learner.train(trainX, trainY, k)
     plt.subplot(2, 2, i+1)
-    mltools.plotClassify2D(learner, trainX[:, 0:2], trainY)
+    mltools.plotClassify2D(learner, trainX, trainY)
     plt.grid(1)
     plt.xlabel('feature 1')
     plt.ylabel('feature 2')
@@ -37,9 +37,9 @@ lenTrainY = trainY.shape[0]
 
 for i, k in enumerate(K):
     learner = mltools.knn.knnClassify()
-    learner.train(trainX[:, 0:2], trainY, k)
-    errTrain.append(1 - float(numpy.sum(learner.predict(trainX[:, 0:2]) == trainY))/float(lenTrainY))
-    errTest.append(1 - float(numpy.sum(learner.predict(testX[:, 0:2]) == testY))/float(lenTestY))
+    learner.train(trainX, trainY, k)
+    errTrain.append(1 - float(numpy.sum(learner.predict(trainX) == trainY))/float(lenTrainY))
+    errTest.append(1 - float(numpy.sum(learner.predict(testX) == testY))/float(lenTestY))
 
 plt.figure(2, (10, 6))
 plt.semilogx(K, errTrain, 'rh-', label="train error")
