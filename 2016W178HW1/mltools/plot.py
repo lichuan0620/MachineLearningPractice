@@ -4,12 +4,10 @@ import matplotlib.pyplot as plt
 from numpy import atleast_2d as twod
 
 
-################################################################################
-##  PLOTTING FUNCTIONS #########################################################
-################################################################################
+"""Plotting functions"""
 
 
-def plotClassify2D(learner, X, Y, pre=lambda x: x, axis=None, nGrid=128, **kwargs):
+def plot_classify_2d(learner, X, Y, pre=lambda x: x, axis=None, nGrid=128, **kwargs):
     """
     Plot data and classifier outputs on two-dimensional data.
     This function plot data (X,Y) and learner.predict(X, Y) 
@@ -34,12 +32,13 @@ def plotClassify2D(learner, X, Y, pre=lambda x: x, axis=None, nGrid=128, **kwarg
     """
 
     if twod(X).shape[1] != 2:
-        raise ValueError('plotClassify2D: function can only be called using two-dimensional data (features)')
+        raise ValueError('plot_classify_2d: function can only be called using two-dimensional data (features)')
 
     # TODO: Clean up code
 
-    if axis == None: axis = plt 
-    axis.plot( X[:,0],X[:,1], 'k.', visible=False )
+    if axis is None:
+        axis = plt
+    axis.plot(X[:, 0], X[:, 1], 'k.', visible=False )
     # TODO: can probably replace with final dot plot and use transparency for image (?)
     ax = axis.axis()
     xticks = np.linspace(ax[0],ax[1],nGrid)
@@ -49,19 +48,24 @@ def plotClassify2D(learner, X, Y, pre=lambda x: x, axis=None, nGrid=128, **kwarg
     XGrid = np.column_stack( (grid[0].flatten(), grid[1].flatten()) )
     if learner is not None:
         YGrid = learner.predict( pre(XGrid) )
-        #axis.contourf( xticks,yticks,YGrid.reshape( (len(xticks),len(yticks)) ), nClasses )
-        axis.imshow( YGrid.reshape( (len(xticks),len(yticks)) ), extent=axis.axis(), interpolation='nearest',origin='lower',alpha=0.5 )
+        # axis.contourf( xticks,yticks,YGrid.reshape( (len(xticks),len(yticks)) ), nClasses )
+        axis.imshow(
+            YGrid.reshape((len(xticks),len(yticks))),
+            extent=axis.axis(),
+            interpolation='nearest',
+            origin='lower',
+            alpha=0.5
+        )
     cmap = plt.cm.get_cmap()
     # TODO: if Soft: predictSoft; get colors for each class from cmap; blend pred with colors & show
     #  
     classes = np.unique(Y)
     cvals = (classes - min(classes))/(max(classes)-min(classes)+1e-100)
-    for i,c in enumerate(classes): 
-        axis.plot( X[Y==c,0],X[Y==c,1], 'ko', color=cmap(cvals[i]), **kwargs )  
-  
+    for i,c in enumerate(classes):
+        axis.plot(X[Y == c, 0],X[Y == c, 1], 'ko', color=cmap(cvals[i]), **kwargs)
 
 
-def histy(X,Y,axis=None,**kwargs):
+def histy(X, Y, axis=None, **kwargs):
     """
     Plot a histogram (using matplotlib.hist) with multiple classes of data
     Any additional arguments are passed directly into hist()
@@ -71,7 +75,7 @@ def histy(X,Y,axis=None,**kwargs):
     Related but slightly different appearance to e.g.
       matplotlib.hist( [X[Y==c] for c in np.unique(Y)] , histtype='barstacked' )
     """
-    if axis == None: axis = plt 
+    if axis is None: axis = plt
     yvals = np.unique(Y)
     nil, bin_edges = np.histogram(X, **kwargs)
     C,H = len(yvals),len(nil)
@@ -88,22 +92,22 @@ def histy(X,Y,axis=None,**kwargs):
             axis.bar(bin_edges[j]+delta/2*i/C*widthFrac,hist[i,j],width=delta*widthFrac,color=cmap(cvals[i]))
 
 
-
-def plotPairs(X,Y=None,**kwargs):
+def plotPairs(X, Y=None, **kwargs):
     """
     Plot all pairs of features in a grid
     Diagonal entries are histograms of each feature
     Off-diagonal are 2D scatterplots of pairs of features
     """
     m,n = X.shape
-    if Y is None: Y = np.ones( (m,) )
-    fig,ax = plt.subplots(n,n)
+    if Y is None:
+        Y = np.ones( (m,) )
+    fig, ax = plt.subplots(n,n)
     for i in range(n):
         for j in range(n):
             if i == j:
                 histy(X[:,i],Y,axis=ax[j,i])
             else:
-                plot_classify_2D(None,X[:,[i,j]],Y,axis=ax[j,i])
+                plot_classify_2d(None, X[:, [i, j]], Y, axis=ax[j, i])
             
 
 def plotGauss2D(mu,cov,*args,**kwargs):
@@ -117,7 +121,7 @@ def plotGauss2D(mu,cov,*args,**kwargs):
     ell = sqrtm(cov).dot(circle)
     ell += twod(mu).T
 
-    plt.plot( mu[0],mu[1], 'x', ell[0,:],ell[1,:], **kwargs)
+    plt.plot(mu[0], mu[1], 'x', ell[0,:], ell[1,:], **kwargs)
 
 
 

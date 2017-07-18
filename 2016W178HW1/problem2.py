@@ -19,7 +19,7 @@ for i, k in enumerate([1, 5, 10, 50]):
     learner = mltools.knn.knnClassify()
     learner.train(trainX, trainY, k)
     plt.subplot(2, 2, i+1)
-    mltools.plotClassify2D(learner, trainX, trainY)
+    mltools.plot_classify_2d(learner, trainX, trainY)
     plt.grid(1)
     plt.xlabel('feature 1')
     plt.ylabel('feature 2')
