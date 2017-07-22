@@ -23,12 +23,8 @@ plt.scatter(test_features, test_targets, color='r', label='test data')
 
 for degree in degrees:
     # prepare data
-    # scale use this:
     poly_train_features, params = ml.transforms.rescale(ml.transforms.fpoly(train_features, degree, 0))
     poly_test_features = ml.transforms.rescale(ml.transforms.fpoly(test_features, degree, 0), params)[0]
-    # no scale use this:
-    # poly_train_features = ml.transforms.fpoly(train_features, degree, 0)
-    # poly_test_features = ml.transforms.fpoly(test_features, degree, 0)
 
     # learn and predict
     learner = ml.linear.linearRegress(poly_train_features, train_targets)
@@ -41,10 +37,7 @@ for degree in degrees:
 
     # plot prediction function
     x = (np.linspace(np.amin(train_features), np.amax(train_features), 200))[:, np.newaxis]
-    # scale use this
     y = learner.predict(ml.transforms.rescale(ml.transforms.fpoly(x, degree, 0), params)[0])
-    # no scale use this:
-    # y = learner.predict(ml.transforms.fpoly(x, degree, 0))
     plt.plot(x, y, label='Degree %d' % degree)
 
 plt.title('training results with different degrees', fontsize=18)
