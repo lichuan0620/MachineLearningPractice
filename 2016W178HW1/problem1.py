@@ -5,7 +5,7 @@
 import numpy
 import matplotlib.pyplot as plt
 
-iris = numpy.genfromtxt("data/iris.txt", delimiter=None)
+iris = numpy.genfromtxt("data/iris.txt")
 Y = iris[:, -1]
 X = iris[:, 0:-1]
 

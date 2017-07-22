@@ -6,7 +6,7 @@ import numpy
 import matplotlib.pyplot as plt
 import mltools
 
-iris = numpy.genfromtxt("data/iris.txt", delimiter=None)
+iris = numpy.genfromtxt("data/iris.txt")
 Y = iris[:, -1]
 X = iris[:, 0:2] # feature 1 & 2
 X, Y = mltools.shuffleData(X, Y)
