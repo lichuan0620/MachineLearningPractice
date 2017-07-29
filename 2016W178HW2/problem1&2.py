@@ -14,7 +14,10 @@ train_data_point = train_features.shape[0]
 test_data_points = test_features.shape[0]
 train_error = []
 test_error = []
-degrees = (1, 3, 5, 7, 10, 18)
+cross_error = []
+cross_fold = 5
+degrees = range(1, 20, 3)
+#degrees = (1, 3, 5, 7, 10, 18)
 
 plt.figure(1, (17, 7))
 plt.subplot(1, 2, 1)
@@ -22,6 +25,17 @@ plt.scatter(train_features, train_targets, color='b', label='training data')
 plt.scatter(test_features, test_targets, color='r', label='test data')
 
 for degree in degrees:
+    # cross validate
+    c_error_d = np.array([])
+    for iFold in range(cross_fold):
+        Xt, Xv, Yt, Yv = ml.crossValidate(train_features, train_targets, cross_fold, iFold)
+        pXt, params = ml.transforms.rescale(ml.transforms.fpoly(Xt, degree, 0))
+        pXv = ml.transforms.rescale(ml.transforms.fpoly(Xv, degree, 0), params)[0]
+        learner = ml.linear.linearRegress(pXt, Yt)
+        predicted_Yv = learner.predict(pXv).flatten()
+        c_error_d = np.append(c_error_d, np.sum(np.power(predicted_Yv - Yv, 2))/float(Yv.shape[0]))
+    cross_error.append(np.mean(c_error_d))
+
     # prepare data
     poly_train_features, params = ml.transforms.rescale(ml.transforms.fpoly(train_features, degree, 0))
     poly_test_features = ml.transforms.rescale(ml.transforms.fpoly(test_features, degree, 0), params)[0]
@@ -48,9 +62,10 @@ plt.axis([np.amin(features)-2, np.amax(features)+2, np.amin(targets)-2, np.amax(
 plt.legend(loc='upper left')
 
 plt.subplot(1, 2, 2)
-plt.title('MSE vs degree', fontsize=18)
-plt.semilogy(degrees, train_error, label='Train set MSE')
-plt.semilogy(degrees, test_error, label='Test set MSE')
+plt.title('Mean Square Error', fontsize=18)
+plt.semilogy(degrees, train_error, 'ko-', label='Train set MSE')
+plt.semilogy(degrees, test_error, 'ro-', label='Test set MSE')
+plt.semilogy(degrees, cross_error, 'bo-', label='CV Train MSE')
 plt.xlabel('degree', fontsize=14)
 plt.ylabel('error', fontsize=14)
 plt.grid(1)
