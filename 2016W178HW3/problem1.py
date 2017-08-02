@@ -19,40 +19,16 @@ targets_sub1 = targets[targets < 2]
 # sub2: class 1 and class 2
 features_sub2 = features[targets > 0, :]
 targets_sub2 = targets[targets > 0]
-# features by classes
-features_c0 = features[targets == 0, :]
-features_c1 = features[targets == 1, :]
-features_c2 = features[targets == 2, :]
 
-
-plt.figure(1, (15, 7))
-plt.subplot(121)
-plt.scatter(features_c0[:, 0], features_c0[:, 1], color='r', label='class 0')
-plt.scatter(features_c1[:, 0], features_c1[:, 1], color='b', label='class 1')
-plt.title('Class 0 vs Class 1')
-plt.xlabel('class 0')
-plt.ylabel('class 1')
-plt.grid(1)
-plt.legend(loc='upper center', ncol=2)
-plt.subplot(122)
-plt.scatter(features_c1[:, 0], features_c1[:, 1], color='r', label='class 1')
-plt.scatter(features_c2[:, 0], features_c2[:, 1], color='b', label='class 2')
-plt.title('Class 1 vs Class 2')
-plt.xlabel('class 1')
-plt.ylabel('class 2')
-plt.grid(1)
-plt.legend(loc='upper center', ncol=2)
-plt.show()
-
-plt.figure(2, (15, 7))
-# empty learner for testing #
-learner = ml.logistic2.logisticClassify2()
-learner.theta = np.mat([[.5], [1], [-.25]])
-#############################
+learner = ml.logistic2.logisticClassify2(features_sub1, targets_sub1, plot=1)
+print 'subset 1 error: %f' % learner.err(features_sub1, targets_sub1)
+learner2 = ml.logistic2.logisticClassify2(features_sub2, targets_sub2, plot=2)
+print 'subset 2 error: %f' % learner2.err(features_sub2, targets_sub2)
+plt.figure(3, figsize=(15, 7))
 plt.subplot(121)
 learner.plotBoundary(features_sub1, targets_sub1)
 plt.legend()
 plt.subplot(122)
-learner.plotBoundary(features_sub2, targets_sub2)
+learner2.plotBoundary(features_sub2, targets_sub2)
 plt.legend()
 plt.show()
