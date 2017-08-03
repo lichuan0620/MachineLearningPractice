@@ -1,4 +1,4 @@
-# UCI-CS178-2016W
-This repository contains the code I've written while self-studying the CS178 (UCI, Winter 2016) course. Some parts of the code was supporting materials downloaded from the course page.
+# Machine Learning Practice Projects
+This repository contains the code I've written while self-studying machine learning. Some materials come from UCI CS178 course as well as some online courses.
 
-Please do not use my code for any purposes, especially if you are currently taking CS178. I did not take the course - I studied it myself; therefore, none of my work was graded or validated by the professor or anyone else. 
+Please do not use my code for any purposes, especially if you are currently taking CS178. Just browsing my code would be considered cheating. Also, I did not take the course - I studied it myself; therefore, none of my work was graded or validated by the professor or anyone else. 
