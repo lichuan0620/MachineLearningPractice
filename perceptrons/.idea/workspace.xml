@@ -11,6 +11,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/2016W178HW3$problem1.coverage" NAME="problem1 Coverage Results" MODIFIED="1501667644295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/perceptrons$project1.coverage" NAME="project1 Coverage Results" MODIFIED="1501809464668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -18,46 +19,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="problem1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/problem1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-              <folding>
-                <element signature="e#65#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pyplot.py" pinned="false" current-in-tab="false">
         <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/pyplot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
+            <state relative-caret-position="15">
               <caret line="314" column="4" lean-forward="false" selection-start-line="314" selection-start-column="4" selection-end-line="314" selection-end-column="4" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mltools/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="147" column="8" lean-forward="false" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mltools/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#55#75#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -65,8 +32,8 @@
       <file leaf-file-name="logistic2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mltools/logistic2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="133" column="25" lean-forward="true" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
+            <state relative-caret-position="1755">
+              <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -74,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="axes.py" pinned="false" current-in-tab="false">
-        <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/axes.py">
+      <file leaf-file-name="project1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="4196" column="46" lean-forward="true" selection-start-line="4196" selection-start-column="46" selection-end-line="4196" selection-end-column="46" />
+            <state relative-caret-position="261">
+              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -87,8 +54,8 @@
       <file leaf-file-name="linear.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mltools/linear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="510">
+              <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
               <folding>
                 <element signature="e#1#12#0" expanded="true" />
               </folding>
@@ -96,34 +63,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="defmatrix.py" pinned="false" current-in-tab="false">
-        <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/matrixlib/defmatrix.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mltools/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mltools/plot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -148,6 +93,7 @@
       <list>
         <option value="$PROJECT_DIR$/mltools/__init__.py" />
         <option value="$PROJECT_DIR$/problem1.py" />
+        <option value="$PROJECT_DIR$/project1.py" />
         <option value="$PROJECT_DIR$/mltools/logistic2.py" />
       </list>
     </option>
@@ -159,8 +105,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="19" />
-    <option name="y" value="24" />
+    <option name="x" value="46" />
+    <option name="y" value="23" />
     <option name="width" value="1217" />
     <option name="height" value="813" />
   </component>
@@ -185,21 +131,21 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="2016W178HW3" />
+              <option name="myItemId" value="perceptrons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="2016W178HW3" />
+              <option name="myItemId" value="perceptrons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="2016W178HW3" />
+              <option name="myItemId" value="perceptrons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="2016W178HW3" />
+              <option name="myItemId" value="perceptrons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -209,11 +155,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="2016W178HW3" />
+              <option name="myItemId" value="perceptrons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="2016W178HW3" />
+              <option name="myItemId" value="perceptrons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -228,8 +174,9 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.problem1">
+  <component name="RunManager" selected="Python.project1">
     <configuration default="false" name="problem1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -244,6 +191,24 @@
       <module name="2016W178HW3" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/problem1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="project1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="2016W178HW3" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -462,12 +427,14 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Python.problem1" />
+      <item index="1" class="java.lang.String" itemvalue="Python.project1" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.problem1" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.project1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.problem1" />
       </list>
     </recent_temporary>
   </component>
@@ -485,7 +452,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="19" y="24" width="1217" height="813" extended-state="0" />
+    <frame x="46" y="23" width="1217" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24979457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -519,16 +486,87 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/problem1.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="4710">
+          <caret line="314" column="4" lean-forward="false" selection-start-line="314" selection-start-column="4" selection-end-line="314" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mltools/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2205">
+          <caret line="147" column="8" lean-forward="false" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mltools/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#65#83#0" expanded="true" />
+            <element signature="e#55#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mltools/logistic2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/axes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62940">
+          <caret line="4196" column="46" lean-forward="true" selection-start-line="4196" selection-start-column="46" selection-end-line="4196" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mltools/linear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/numpy/matrixlib/defmatrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mltools/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mltools/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problem1.py" />
     <entry file="file://$PROJECT_DIR$/mltools/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2160">
@@ -597,9 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,7 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -615,7 +649,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -623,9 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,31 +679,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mltools/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
+        <state relative-caret-position="2160">
           <caret line="147" column="8" lean-forward="false" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="314" column="4" lean-forward="false" selection-start-line="314" selection-start-column="4" selection-end-line="314" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mltools/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mltools/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="45">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#55#75#0" expanded="true" />
@@ -683,8 +705,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mltools/linear.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+        <state relative-caret-position="510">
+          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding>
             <element signature="e#1#12#0" expanded="true" />
           </folding>
@@ -693,26 +715,33 @@
     </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/axes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="4196" column="46" lean-forward="true" selection-start-line="4196" selection-start-column="46" selection-end-line="4196" selection-end-column="46" />
+        <state relative-caret-position="62805">
+          <caret line="4196" column="46" lean-forward="false" selection-start-line="4196" selection-start-column="46" selection-end-line="4196" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/problem1.py">
+    <entry file="file://$PROJECT_DIR$/problem1.py" />
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="28" column="49" lean-forward="true" selection-start-line="28" selection-start-column="49" selection-end-line="28" selection-end-column="49" />
-          <folding>
-            <element signature="e#65#83#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="15">
+          <caret line="314" column="4" lean-forward="false" selection-start-line="314" selection-start-column="4" selection-end-line="314" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mltools/logistic2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="133" column="25" lean-forward="true" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
+        <state relative-caret-position="1755">
+          <caret line="117" column="0" lean-forward="true" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

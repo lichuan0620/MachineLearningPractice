@@ -84,7 +84,7 @@ class logisticClassify2(classifier):
 
     def predict(self, data):
         """ Return the predictied class of each data point in X"""
-        assert data.shape[1] is 2, 'Prediction requires the data to have exactly two features'
+        # TODO: exception handling?
         return [self.classes[1] if self.theta[0] + np.dot(self.theta[1:], d) > 0 else self.classes[0] for d in data]
 
     def train(self, X, Y, init_step=1, min_change=1e-4, iteration_limit=5000, plot=None):
@@ -109,17 +109,11 @@ class logisticClassify2(classifier):
 
             # gradient decent
             for j in range(0, data_point):
-                # sigma = (1 + e^(-linear_response))^-1
                 sigma = 1/(1 + np.exp(-np.dot(features[j], self.theta)))
-                # NIL = -avg(
-                #       log(sigma)      if Yi = 1
-                #       log(1-sigma)    if Yi = 0
-                #   )
-                # d_NIL/d_theta = -avg(
-                #       (1 - sigma)*Xi  if  Yi = 1
-                #       -sigma*Xi       if  Yi = 0
-                #   )
-                gradient = (1 - sigma)*features[j] if targets[j] else -sigma*features[j]
+                # NIL = -avg(y*log(sigma)+(1-y)log(1-sigma))
+                # gradient = -avg(sigma-y)*x
+                gradient = -(sigma - targets[j])*features[j]
+                # TODO: L2 regularization (gradient -= alpha*self.theta ?)
                 self.theta += step*gradient
 
             # record current error rate and surrogate loss
