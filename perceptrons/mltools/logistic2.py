@@ -23,12 +23,14 @@ class logisticClassify2(classifier):
         theta   :       linear parameters of the classifier (1xN numpy array, where N=# features)
         step_k  :       determine how fast the size of the steps decreases over the gradient
                         decent process; larger value means slower decrease
-        alpha   :
+        alpha   :       the constant used for L2 regularization; set to 0 to turn off
+        report  :       whether or not to print debug report; set to 0 to turn off
 
     """
 
     step_k  = 2.0
     alpha   = 0.0
+    report  = 1
 
     def __init__(self, *args, **kwargs):
         """
@@ -139,7 +141,18 @@ class logisticClassify2(classifier):
 
             # abort if there is no significant change in surrogate loss
             if (i > 1) and (abs(negative_log_likely[-1]-negative_log_likely[-2]) < min_change):
-                return
+                break
+
+        if self.report:
+            print '\n--- training report ---'
+            print 'parameters:'
+            print '\talpha (L2 Regu): %.1f\n\tstep constant: %.1f'%(self.alpha, self.step_k)
+            print '\tinitial step size: %.1f\n\tminimum change: %.1e'%(init_step, min_change)
+            print 'iteration took: %d' % len(error)
+            print 'min/final error: %.2f%%/%.2f%%' % (min(error)*100, self.err(X, Y)*100)
+            print 'min/final sur. lost: %.3f/%.3f' % (min(negative_log_likely), negative_log_likely[-1])
+            print '----------------------'
+
 
 ################################################################################
 ################################################################################

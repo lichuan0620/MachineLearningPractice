@@ -21,9 +21,7 @@ features_sub2 = features[targets > 0, :]
 targets_sub2 = targets[targets > 0]
 
 learner = ml.logistic2.logisticClassify2(features_sub1, targets_sub1, plot=1)
-print 'subset 1 error: %f' % learner.err(features_sub1, targets_sub1)
 learner2 = ml.logistic2.logisticClassify2(features_sub2, targets_sub2, plot=2)
-print 'subset 2 error: %f' % learner2.err(features_sub2, targets_sub2)
 plt.figure(3, figsize=(15, 7))
 plt.subplot(121)
 learner.plotBoundary(features_sub1, targets_sub1)
