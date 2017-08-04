@@ -21,12 +21,14 @@ class logisticClassify2(classifier):
     Attributes:
         classes :       a list of the possible class labels
         theta   :       linear parameters of the classifier (1xN numpy array, where N=# features)
-        step_constant:  determine how fast the size of the steps decreases over the gradient
+        step_k  :       determine how fast the size of the steps decreases over the gradient
                         decent process; larger value means slower decrease
+        alpha   :
 
     """
 
-    step_constant = 2.0
+    step_k  = 2.0
+    alpha   = 0.0
 
     def __init__(self, *args, **kwargs):
         """
@@ -83,7 +85,7 @@ class logisticClassify2(classifier):
         return P
 
     def predict(self, data):
-        """ Return the predictied class of each data point in X"""
+        """ Return the predicted class of each data point in X"""
         # TODO: exception handling?
         return [self.classes[1] if self.theta[0] + np.dot(self.theta[1:], d) > 0 else self.classes[0] for d in data]
 
@@ -105,15 +107,15 @@ class logisticClassify2(classifier):
         negative_log_likely = []
         error = []
         for i in range(0, iteration_limit):
-            step = self.step_constant * init_step / (self.step_constant + i)
+            step = self.step_k * init_step / (self.step_k + i)
 
             # gradient decent
             for j in range(0, data_point):
                 sigma = 1/(1 + np.exp(-np.dot(features[j], self.theta)))
                 # NIL = -avg(y*log(sigma)+(1-y)log(1-sigma))
                 # gradient = -avg(sigma-y)*x
-                gradient = -(sigma - targets[j])*features[j]
-                # TODO: L2 regularization (gradient -= alpha*self.theta ?)
+                # L2 regularization should not be enabled since there is no higher order polynomials
+                gradient = -(sigma - targets[j])*features[j]-self.alpha*self.theta
                 self.theta += step*gradient
 
             # record current error rate and surrogate loss
