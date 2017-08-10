@@ -2,8 +2,11 @@
   <dictionary name="Chuan Li">
     <words>
       <w>chuan</w>
+      <w>dataset</w>
       <w>minst</w>
       <w>mnist</w>
+      <w>multinomial</w>
+      <w>softmax</w>
     </words>
   </dictionary>
 </component>
